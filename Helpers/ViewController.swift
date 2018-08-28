@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
          self.view.backgroundColor = UIColor.FlatColor.IndianFlatUIPalette.ClearChill
+        APIManager.postService(url: "http://merp.intermesh.net/index.php/userlist/mycompany?empid=29412&usertype=1&sorting=&native=yes", params: [:], success: { (json) in
+                        print(json as Any)
+                    }) { (error) in
+            
+                    }
     }
 
     override func didReceiveMemoryWarning() {
